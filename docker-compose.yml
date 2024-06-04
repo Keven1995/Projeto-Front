@@ -29,7 +29,9 @@ services:
       - app-network
 
   frontend:
-    image: front-gestao-contribuintes:latest
+    build:
+      context: ./front-gestao-contribuintes
+      dockerfile: Dockerfile
     ports:
       - "80:80"
     networks:
